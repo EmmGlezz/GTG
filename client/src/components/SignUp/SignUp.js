@@ -14,13 +14,14 @@ import "./SignUp.css";
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = (props) => {
-  const history = useNavigate()
-
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  
+  const history = useNavigate()
+  const navigate = useNavigate();
+  const handleClick = () => navigate('/login');
 
   const registerUser = async (event) => {
     event.preventDefault();
@@ -54,6 +55,7 @@ const SignUp = (props) => {
             <MDBCard className='bg-dark text-white my-5 mx-auto' style={{borderRadius: '1rem', maxWidth: '400px'}}>
                 <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
 
+                <img src='images/GTG_LOGO.png' alt='GTG' className='logo'/>
                 <h2 className="fw-bold mb-2 text-uppercase">Sign Up</h2>
                 <p className="text-white-50 mb-5">Please fill all the fields!</p>
 
@@ -98,7 +100,7 @@ const SignUp = (props) => {
                 </div>
 
                 <div>
-                    <p className="mb-0">Already have an account? <button onClick={() => props.onChange(true)} class="text-white-50 fw-bold astext">Log In</button></p>
+                    <p className="mb-0">Already have an account? <button onClick={handleClick} class="text-white-50 fw-bold astext">Log In</button></p>
 
                 </div>
                 </MDBCardBody>

@@ -13,3 +13,8 @@
     padding:0;
     cursor: pointer;
 }
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 30px;
+}
