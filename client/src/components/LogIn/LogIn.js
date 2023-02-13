@@ -33,7 +33,7 @@ const LogIn = (props) => {
 
     if(data.user) {
       alert('LogIn succesful');
-      window.location.href = '/home';
+      window.location.href = '/';
     } else {
       alert('Please check your email or password')
     }
