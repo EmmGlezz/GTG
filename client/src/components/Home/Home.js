@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const Home = () => {
-  return (
-    <div>
-        
-    </div>
-  )
-}
-
-export default Home;
-=======
 import React from "react";
 import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -63,4 +50,3 @@ const Home = () => {
 };
 
 export default Home;
->>>>>>> bootstrap
