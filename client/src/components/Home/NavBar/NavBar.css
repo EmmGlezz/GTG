@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #0F1218;
+    color: white !important;
+    height: 80px;
+}
+
+.navbar.active {
+    background-color: #17191E;
+    transition: 0.1s;
+    color: white;
+}
+
+.navbar-button {
+    color: white;
+    padding: 16px 24px;
+    align-self: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar-button:hover {
+    color: white;
+    background-color: #17191E;
+}
+
+.logo-title {
+    margin-left: 10px;
+}
