@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
     <div>
-        <Navbar variant='dark' className={scroll ? 'fixed-top active' : 'fixed-top '}>
+        <Navbar variant='dark' >
             <Container>
                 <Navbar.Brand href="/">
                     <img
