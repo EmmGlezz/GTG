@@ -18,7 +18,7 @@ This is a School Project.
 
 ## Demo
 
-Demo link would be updated soon.
+Demo link will be updated soon.
 
 
 ## Tech Stack
