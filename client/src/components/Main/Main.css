@@ -1,0 +1,101 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/* Side bar */
+.Left-app {
+  text-align: center;
+  height: 100vh;
+  position: fixed;
+  /* overflow-y: scroll; */
+  top: 0;
+  bottom: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Sidebar {
+  height: 100%;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #1251a6;
+}
+
+.sidebarCat {
+  padding-top: 50px;
+}
+
+.sideTop {
+  padding-top: 10%;
+}
+
+.sideuserinfo {
+  background-color: #121212;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Right-app {
+  position: relative;
+  margin-left: 250px;
+  flex: 4;
+  width: 80%;
+}
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 50px;
+  padding: 20px;
+  justify-items: center;
+}
+.title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.card-body {
+  background-color: #00425a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.steam-link {
+  color: white;
+  text-decoration: none;
+}
+.steam-link:hover {
+  color: white;
+}
+
+.card {
+  border: none !important;
+}
+.steam-fav-bts {
+  display: flex;
+  justify-content: space-between;
+}
+.fav {
+  margin: 0;
+}
+/* .card-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+} */
+
+.main {
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 1;
+  justify-content: space-between;
+}
