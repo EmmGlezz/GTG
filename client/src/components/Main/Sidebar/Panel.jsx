@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 
 function Panel(props) {
   return (
-    <Card style={{ width: "18rem", height: "19rem" }}>
+    <Card style={{ width: "18rem", height: "19rem" }} className="panel">
       <Card.Img variant="top" src={props.img} />
       <Card.Body className="card-body">
         <p className="title">{props.name}</p>

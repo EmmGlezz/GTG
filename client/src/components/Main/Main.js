@@ -16,7 +16,7 @@ export default function Main() {
   const SuggestedGames = games();
 
   return (
-    <div className="main">
+    <div className="main-wrapper">
       <div className="Left-app">
         <Sidebar />
       </div>

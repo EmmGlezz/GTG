@@ -1,10 +1,14 @@
 import React from "react";
 import "./Home.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./NavBar/NavBar";
 import Footer from "./Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    const navigate = useNavigate();
+     const handleClick = () => navigate("/main");
+    
 	return (
 		<div className='home'>
 			<NavBar />
@@ -33,7 +37,7 @@ const Home = () => {
                             you find the perfect game to play. So why wait? Get This Game today!
                             </p>
                             <div className='d-grid gap-2 d-md-flex justify-content-md-start'>
-                                <button type='button' className='demo-button'>
+                                <button type='button' className='demo-button' onClick={handleClick}>
                                     TRY DEMO
                                 </button>
                             </div>
