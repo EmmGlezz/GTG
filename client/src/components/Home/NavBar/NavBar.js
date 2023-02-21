@@ -1,22 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 const NavBar = () => {
-    const [scroll, setScroll] = useState(false);
-
-    const changeBackground = () => {
-        if(window.scrollY >= 80) {
-            setScroll(true);
-        } else {
-            setScroll(false);
-        }
-    }
-
-    window.addEventListener('scroll', changeBackground);
-
+    const navigate = useNavigate();
+    const handleClick = () => navigate("/main");
 
   return (
     <div>
@@ -39,7 +30,7 @@ const NavBar = () => {
                     </Nav.Item>
                     <Nav.Item>
                     <Nav.Link>
-                        <a className='navbar-button' href='/'>
+                        <a className='navbar-button' onClick={handleClick} href='/'>
                             Try Demo
                         </a>
                     </Nav.Link>
