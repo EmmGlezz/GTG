@@ -4,12 +4,16 @@ const cors = require('cors');
 const mongoose = require("mongoose");
 const User = require('./models/user.model')
 const jwt = require('jsonwebtoken');
-
+require('dotenv').config();
 
 app.use(cors());
 app.use(express.json())
 
-mongoose.connect('mongodb://localhost:27017/gtg')
+// mongoose.connect('mongodb://localhost:27017/gtg')
+
+
+
+
 
 app.post("/api/register", async (req, res) => {
     console.log(req.body);
@@ -47,4 +51,11 @@ app.post("/api/login", async (req, res) => {
     
 })
 
-app.listen(5500, () => {console.log("Server started on port 5500")})
+//Connect to database
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => {
+        app.listen(5500, () => {console.log("Server started on port 5500")})
+    })
+    .catch((error) => {
+        console.log(error)
+    })
