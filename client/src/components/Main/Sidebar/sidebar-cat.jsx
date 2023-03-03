@@ -11,7 +11,7 @@ function SideCat() {
           type="checkbox"
           value=""
           id="flexCheckDefault"  />
-         Action Adventure
+         Fighting
        </label>
       </div>
 
@@ -31,7 +31,27 @@ function SideCat() {
           type="checkbox"
           value=""
           id="flexCheckDefault"  />
-         MMO
+         Music
+       </label>
+      </div>
+
+      <div className="form-check">
+       <label class="form-check-label fs-5" htmlfor="flexCheckDefault">
+         <input class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"  />
+         Platform
+       </label>
+      </div>
+
+      <div className="form-check">
+       <label class="form-check-label fs-5" htmlfor="flexCheckDefault">
+         <input class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"  />
+         Puzzle
        </label>
       </div>
 
@@ -42,6 +62,46 @@ function SideCat() {
           value=""
           id="flexCheckDefault"  />
          Racing
+       </label>
+      </div>
+
+      <div className="form-check">
+       <label class="form-check-label fs-5" htmlfor="flexCheckDefault">
+         <input class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"  />
+         Real Time Strategy (RTS)
+       </label>
+      </div>
+
+      <div className="form-check">
+       <label class="form-check-label fs-5" htmlfor="flexCheckDefault">
+         <input class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"  />
+         Role-playing (RPG)
+       </label>
+      </div>
+
+      <div className="form-check">
+       <label class="form-check-label fs-5" htmlfor="flexCheckDefault">
+         <input class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"  />
+         Simulator
+       </label>
+      </div>
+
+      <div className="form-check">
+       <label class="form-check-label fs-5" htmlfor="flexCheckDefault">
+         <input class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"  />
+         Sport
        </label>
       </div>
 

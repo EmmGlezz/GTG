@@ -3,7 +3,6 @@ import "./Main.css";
 import Panel from "./Sidebar/Panel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Sidebar/sidebar";
-// import axios from "axios";
 
 
 
