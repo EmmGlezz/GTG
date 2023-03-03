@@ -3,6 +3,7 @@ import Panel from "./Sidebar/Panel";
 import games from "./games";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Sidebar/sidebar";
+// import axios from "axios";
 
 function createPanel(game) {
   return (
@@ -12,8 +13,16 @@ function createPanel(game) {
   );
 }
 
+
+
+
 export default function Main() {
   const SuggestedGames = games();
+  const GamesData = async () => {
+    const response = await fetch('http://localhost:5500/api/games');
+    const data = await response.json()
+    console.log(data)
+  }
 
   return (
     <div className="main-wrapper">
@@ -22,6 +31,7 @@ export default function Main() {
       </div>
       <div className="Right-app">
         <div className="gamesGrid bg-dark">
+        <button onClick={GamesData}>Fetch</button>
           {" "}
           {SuggestedGames.map(createPanel)}
         </div>
