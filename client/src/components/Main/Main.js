@@ -1,27 +1,26 @@
+import React, {useEffect, useState} from "react";
 import "./Main.css";
 import Panel from "./Sidebar/Panel";
-import games from "./games";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Sidebar/sidebar";
 // import axios from "axios";
-
-function createPanel(game) {
-  return (
-    <div className="pt1">
-      <Panel img={game.img} name={game.name} link={game.link} />
-    </div>
-  );
-}
 
 
 
 
 export default function Main() {
-  const SuggestedGames = games();
+
+  const [gamesRendered, setGamesRendered] = useState([])
+
+  useEffect(() => {
+    GamesData()
+  }, [])
+  
   const GamesData = async () => {
     const response = await fetch('http://localhost:5500/api/games');
     const data = await response.json()
     console.log(data)
+    setGamesRendered(data)
   }
 
   return (
@@ -31,9 +30,15 @@ export default function Main() {
       </div>
       <div className="Right-app">
         <div className="gamesGrid bg-dark">
-        <button onClick={GamesData}>Fetch</button>
           {" "}
-          {SuggestedGames.map(createPanel)}
+          {gamesRendered.map(game => {
+            const gameURL = game.cover.url.replace("thumb", "cover_big")
+            return (
+              <div className="pt1">
+                <Panel img={gameURL} name={game.name} />
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

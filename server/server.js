@@ -77,7 +77,7 @@ app.get("/api/games", async (req, res) => {
         const response = await axios.post('https://id.twitch.tv/oauth2/token?client_id=rp12vq3vzr3w42e7lzauu2pvhr2ul8&client_secret=l0jm3jo3ic1abtw20ye47hwbunq5bn&grant_type=client_credentials')
         const access_token = response.data.access_token
 
-        const data = 'fields name, cover.*;';
+        const data = 'fields name, cover.*, websites.*; where rating >= 80 & release_dates.date > 631152000; limit 30;';
 
         const config = {
         method: 'post',
