@@ -10,36 +10,49 @@ import Sidebar from "./Sidebar/sidebar";
 export default function Main() {
 
   const [gamesRendered, setGamesRendered] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     GamesData()
   }, [])
   
   const GamesData = async () => {
+    setLoading(true)
     const response = await fetch('http://localhost:5500/api/games');
     const data = await response.json()
     console.log(data)
     setGamesRendered(data)
+    setLoading(false)
   }
 
   return (
-    <div className="main-wrapper">
-      <div className="Left-app">
-        <Sidebar />
+    <div>
+      {loading ? (
+      <div className="loader-container">
+        <img className="logo-anim" src="images/GTG_LOGO.png" alt="logo"/>
+        <div className="spinner"></div>
+        <div></div>
       </div>
-      <div className="Right-app">
-        <div className="gamesGrid bg-dark">
-          {" "}
-          {gamesRendered.map(game => {
-            const gameURL = game.cover.url.replace("thumb", "cover_big")
-            return (
-              <div className="pt1">
-                <Panel img={gameURL} name={game.name} />
-              </div>
-            )
-          })}
+      ) : (
+      <div className="main-wrapper">
+        <div className="Left-app">
+          <Sidebar />
+        </div>
+        <div className="Right-app">
+          <div className="gamesGrid bg-dark">
+            {" "}
+            {gamesRendered.map(game => {
+              const gameURL = game.cover.url.replace("thumb", "cover_big")
+              return (
+                <div className="pt1">
+                  <Panel img={gameURL} name={game.name} />
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
+      )}
     </div>
   );
 }
