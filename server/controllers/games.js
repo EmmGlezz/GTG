@@ -1,10 +1,9 @@
 const axios = require('axios')
+const getToken = require('./token')
 
 
 const getGamesData = async (req, res) => {
-    const response = await axios.post('https://id.twitch.tv/oauth2/token?client_id=rp12vq3vzr3w42e7lzauu2pvhr2ul8&client_secret=l0jm3jo3ic1abtw20ye47hwbunq5bn&grant_type=client_credentials')
-    const access_token = response.data.access_token
-    console.log(access_token)
+    const access_token = await getToken()
     try {
         const data = 'fields name, cover.*, websites.*, genres.*; where rating >= 80 & release_dates.date > 1577231999; limit 30;';
     
