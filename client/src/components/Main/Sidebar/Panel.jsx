@@ -4,8 +4,8 @@ import Card from "react-bootstrap/Card";
 
 function Panel(props) {
   return (
-    <Card style={{ width: "18rem", height: "19rem" }} className="panel">
-      <Card.Img variant="top" src={props.img} />
+    <Card style={{ minHeight: "558px"}} className="panel">
+      <Card.Img variant="top" src={props.img} style={{padding: '5px', backgroundColor: '#00425a'}}/>
       <Card.Body className="card-body">
         <p className="title">{props.name}</p>
         <div className="steam-fav-bts">
@@ -23,3 +23,4 @@ function Panel(props) {
   );
 }
 export default Panel;
+// width: "18rem"

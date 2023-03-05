@@ -36,6 +36,7 @@ const SignUp = (props) => {
         password,
       }),
     });
+    console.log(response)
 
     const data = await response.json();
     if (data.status === "Ok") {

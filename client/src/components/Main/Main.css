@@ -18,6 +18,8 @@
 
 .sidebarCat {
   padding-top: 50px;
+  padding-left: 15%;
+  text-align: left;
 }
 
 .sideTop {
@@ -41,7 +43,7 @@
 }
 .gamesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 50px;
   padding: 20px;
   justify-items: center;
@@ -57,7 +59,7 @@
   background-color: #00425a;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .steam-link {
   color: white;
@@ -91,4 +93,51 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.834);
+  z-index: 1;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #00425a transparent #00425a transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+.logo-anim {
+  width: 100px;
+  animation: logo-popping 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes logo-popping {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -2,17 +2,14 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mongoose = require("mongoose");
+const axios = require("axios");
 const User = require('./models/user.model')
 const jwt = require('jsonwebtoken');
+const games_routes = require('./routes/games')
 require('dotenv').config();
 
 app.use(cors());
 app.use(express.json())
-
-// mongoose.connect('mongodb://localhost:27017/gtg')
-
-
-
 
 
 app.post("/api/register", async (req, res) => {
@@ -32,7 +29,6 @@ app.post("/api/register", async (req, res) => {
 })
 
 app.post("/api/login", async (req, res) => {
-
     const user = await User.findOne({
         email: req.body.email,
         password: req.body.password
@@ -51,11 +47,15 @@ app.post("/api/login", async (req, res) => {
     
 })
 
+app.use('/api/games', games_routes)
+
 //Connect to database
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
-        app.listen(5500, () => {console.log("Server started on port 5500")})
+        app.listen(process.env.PORT, () => {console.log(`Server started on port ${process.env.PORT}`)})
     })
     .catch((error) => {
         console.log(error)
     })
+
+    
