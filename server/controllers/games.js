@@ -5,7 +5,7 @@ const getToken = require('./token')
 const getGamesData = async (req, res) => {
     const access_token = await getToken()
     try {
-        const data = 'fields name, cover.*, websites.*, genres.*; where rating >= 80 & release_dates.date > 1577231999; limit 30;';
+        const data = 'fields name, cover.*, websites.*, genres.*; where rating >= 60 & release_dates.date > 1577231999; limit 40;';
     
         const config = {
         method: 'post',
