@@ -22,7 +22,7 @@ const LogIn = (props) => {
 
   const logInUser = async (event) => {
     event.preventDefault();
-    const response = await fetch("http://localhost:5500/api/login", {
+    const response = await fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const LogIn = (props) => {
 
     if (data.user) {
       alert("LogIn succesful");
-      window.location.href = "/main";
+      navigate("/main");
     } else {
       alert("Please check your email or password");
     }

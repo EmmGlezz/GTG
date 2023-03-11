@@ -23,10 +23,10 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Nav className="justify-content-end" activeKey="/home">
                     <Nav.Item>
-                    <Nav.Link href="/login">Log In</Nav.Link>
+                    <Nav.Link onClick={() => navigate('/login')}>Log In</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                    <Nav.Link href="/register">Sign Up</Nav.Link>
+                    <Nav.Link onClick={() => navigate('/register')}>Sign Up</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                     <Nav.Link>
