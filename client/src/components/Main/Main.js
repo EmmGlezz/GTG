@@ -18,7 +18,7 @@ export default function Main() {
   
   const GamesData = async () => {
     setLoading(true)
-    const response = await fetch('http://localhost:5500/api/games');
+    const response = await fetch('/api/games');
     const data = await response.json()
     console.log(data)
     setGamesRendered(data)
