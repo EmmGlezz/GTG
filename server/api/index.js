@@ -11,21 +11,6 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json())
 
-const path = __dirname + '/public/';
-app.use(express.static(path))
-
-app.get('/', function (req,res) {
-    res.sendFile(path + "index.html");
-  });
-
-  app.get('/register', function (req,res) {
-    res.sendFile(path + "index.html");
-  });
-
-  app.get('/login', function (req,res) {
-    res.sendFile(path + "index.html");
-  });
-
 
 app.post("/api/register", async (req, res) => {
     console.log(req.body);
