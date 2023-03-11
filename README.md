@@ -18,7 +18,7 @@ This is a School Project.
 
 ## Demo
 
-Demo link will be updated soon.
+https://gtg-app-plum.vercel.app/
 
 
 ## Tech Stack
