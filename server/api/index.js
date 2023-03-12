@@ -6,6 +6,7 @@ const axios = require("axios");
 const User = require('../models/user.model')
 const jwt = require('jsonwebtoken');
 const games_routes = require('../routes/games')
+const game_route = require('../routes/game')
 require('dotenv').config();
 
 app.use(cors());
@@ -48,6 +49,7 @@ app.post("/api/login", async (req, res) => {
 })
 
 app.use('/api/games', games_routes)
+app.use('/api/game/:gameId', game_route)
 
 //Connect to database
 mongoose.connect(process.env.MONGO_URI)

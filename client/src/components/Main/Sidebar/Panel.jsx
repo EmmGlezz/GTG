@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 function Panel(props) {
   return (
@@ -8,15 +9,12 @@ function Panel(props) {
       <Card.Img variant="top" src={props.img} style={{padding: '5px', backgroundColor: '#00425a'}}/>
       <Card.Body className="card-body">
         <p className="title">{props.name}</p>
-        <div className="steam-fav-bts">
-          <Button className="steam-btn" variant="dark" size="md">
-            <a className="steam-link" target="_blank" href={props.link}>
-              Steam
-            </a>
+        <div className="W-100">
+        <Link to={`/game/${props.gameId}`}>
+          <Button className="steam-btn w-100" variant="dark" size="lg">
+            VIEW GAME
           </Button>
-          <Button className="fav-btn" variant="dark" size="md">
-            <p className="fav">Favourite</p>
-          </Button>
+        </Link>
         </div>
       </Card.Body>
     </Card>

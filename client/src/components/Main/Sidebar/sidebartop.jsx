@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function SidebarTop(){
     const navigate = useNavigate();
-    const handleClick = () => navigate("/");
+    const handleClick = () => navigate("/main");
 
     return(
     <div className="sideTop">
