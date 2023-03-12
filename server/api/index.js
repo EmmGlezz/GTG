@@ -3,9 +3,9 @@ const app = express();
 const cors = require('cors');
 const mongoose = require("mongoose");
 const axios = require("axios");
-const User = require('./models/user.model')
+const User = require('../models/user.model')
 const jwt = require('jsonwebtoken');
-const games_routes = require('./routes/games')
+const games_routes = require('../routes/games')
 require('dotenv').config();
 
 app.use(cors());
