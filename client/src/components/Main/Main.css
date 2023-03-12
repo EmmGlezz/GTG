@@ -1,4 +1,6 @@
 /* Side bar */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
 .Left-app {
   text-align: center;
   height: 100vh;
@@ -13,9 +15,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: #1251a6;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #00425a;
 }
-
+.form-check-label:hover {
+  color: white;
+  transition: 1s;
+}
 .sidebarCat {
   padding-top: 50px;
   padding-left: 15%;
@@ -50,7 +57,7 @@
 }
 .card-body .title {
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.25rem;
   text-align: center;
 }
@@ -124,10 +131,10 @@
 
 @keyframes spin-anim {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
