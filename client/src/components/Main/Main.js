@@ -3,7 +3,7 @@ import "./Main.css";
 import Panel from "./Sidebar/Panel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Sidebar/sidebar";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -45,7 +45,7 @@ export default function Main() {
               const gameURL = game.cover.url.replace("thumb", "cover_big")
               return (
                 <div className="pt1">
-                  <Panel img={gameURL} name={game.name} />
+                  <Panel img={gameURL} name={game.name} gameId={game.id}/>
                 </div>
               )
             })}
