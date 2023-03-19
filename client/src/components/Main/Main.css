@@ -151,3 +151,30 @@
     transform: scale(1);
   }
 }
+
+.page-item.active .page-link {
+  background-color: #e3ebf7;
+  color: #00425a !important;
+  border: 0;
+  box-shadow: 0 4px 9px -4px #e3ebf7;
+  transition: all .2s linear;
+  font-weight: 500;
+}
+.page-link:hover {
+  color: #00425a !important;
+}
+
+.page-link {
+  border: 0;
+  font-size: .9rem;
+  color: white !important;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  transition: all .3s linear;
+  border-radius: 0.25rem;
+}
+
+.logo_hover:hover {
+  cursor: pointer;
+}

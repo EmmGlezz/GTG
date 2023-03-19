@@ -32,7 +32,7 @@ const GamePage = () => {
 
   useEffect(() => {
     GameData();
-  }, []);
+  }, []); //eslint-disable-line
   const GameData = async () => {
     setLoading(true);
     const response = await fetch(`/api/game/${encodeURIComponent(gameId)}`); //Requests only the game matching the ID
@@ -191,10 +191,9 @@ const GamePage = () => {
     },
   ];
   const websites_in_game = [];
-  for (let i = 0; i < gameRendered[0]?.websites.length; i++) {
-    websites_in_game.push(gameRendered[0]?.websites[i].category);
+  for (let i = 0; i < gameRendered[0]?.websites?.length; i++) {
+    websites_in_game.push(gameRendered[0]?.websites[i]?.category);
   }
-  console.log(websites_in_game);
 
   return (
     <div>
@@ -278,7 +277,7 @@ const GamePage = () => {
               <div className="screenshots mt-5">
                 <h2>Screenshots</h2>
                 <Row>
-                  {gameRendered[0]?.screenshots.map((screenshot, idx) => {
+                  {gameRendered[0]?.screenshots?.map((screenshot, idx) => {
                     const screenshotURL = screenshot.url.replace(
                       "thumb",
                       "screenshot_big"
