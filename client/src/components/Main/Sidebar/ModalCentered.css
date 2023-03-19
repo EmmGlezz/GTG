@@ -1,0 +1,8 @@
+.cat {
+    color: #3BA643
+}
+.cat:hover {
+    color: white;
+  transition: 1s;
+  cursor: pointer;
+}

@@ -7,6 +7,7 @@ const User = require('./models/user.model')
 const jwt = require('jsonwebtoken');
 const games_routes = require('./routes/games')
 const game_route = require('./routes/game')
+const genres_route = require('./routes/genres')
 require('dotenv').config();
 
 app.use(cors());
@@ -49,12 +50,8 @@ app.post("/api/login", async (req, res) => {
 })
 
 app.use('/api/games', games_routes)
-
-// app.get('/api/game/:gameId', async (req, res) => {
-//     console.log(req.params)
-//     return res.json({status: 'Reached'})
-// })
 app.use('/api/game/:gameId', game_route)
+app.use('/api/genres/:genreId', genres_route)
 
 //Connect to database
 mongoose.connect(process.env.MONGO_URI)

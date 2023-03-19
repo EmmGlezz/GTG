@@ -17,15 +17,17 @@
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: #00425a;
+  color: #3BA643;
 }
-.form-check-label:hover {
+.mainCat:hover {
   color: white;
   transition: 1s;
+  cursor: pointer;
 }
+
 .sidebarCat {
   padding-top: 50px;
-  padding-left: 15%;
+  /* padding-left: 15%; */
   text-align: left;
 }
 

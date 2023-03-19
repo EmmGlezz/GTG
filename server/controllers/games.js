@@ -5,7 +5,7 @@ require("dotenv").config();
 const getGamesData = async (req, res) => {
 	const access_token = await getToken();
 	try {
-		const data = "fields name, cover.*, websites.*, genres.*; where rating >= 60 & release_dates.date > 1577231999; limit 40;"
+		const data = "fields name, cover.*, websites.*, genres.*; where rating >= 60 & release_dates.date > 1577231999 & cover != null & rating != null & artworks != null & websites != null; sort rating desc; limit 40;"
 
 		const config = {
 			method: "post",
